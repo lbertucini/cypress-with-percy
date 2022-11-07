@@ -42,7 +42,7 @@ describe('Validation Home', () => {
     cy.loginComponents()
   })
 
-  it('It should register component',() => {
+  it.only('It should register component',() => {
 
 
   cy.get('input[name="customer.firstName"]')
