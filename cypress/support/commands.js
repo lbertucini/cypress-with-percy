@@ -351,7 +351,7 @@ Cypress.Commands.add('componentNews', () =>{
   cy.get('a[id="1"]')
     .should('be.visible')
 
-  cy.get(':nth-child(21)')
+  cy.get(':nth-child(19)')
 })
 
 Cypress.Commands.add('componentServices', () =>{
