@@ -17,24 +17,13 @@ const repeatPassword = password
 describe('Validation Home', () => {
   
   beforeEach(() => {
-    cy.visit('https://parabank.parasoft.com/parabank/index.htm')
   })
 
   it('It should login',() => {
 
+    cy.portalLogin()
 
-  cy.get('input[name="username"]')
-    .click()
-    .type(username)
-  
-  cy.get('input[name="password"]')
-    .click()
-    .type(password)
-
-  cy.get('input[value="Log In"]')
-    .click()
-
-    
   })
+
 
 })  

@@ -1,20 +1,16 @@
 /// <reference types="cypress" />
 
-
-const { faker } = require('@faker-js/faker')
-
-
-const firstName = faker.name.firstName()
-const lastName = faker.name.lastName()
-const streetAddress = faker.address.street(true)
-const city = faker.address.city()
-const state = faker.address.state()
-const zipCode = faker.address.zipCode()
-const phone = faker.phone.number()
-const ssn = faker.random.numeric(9, { allowLeadingZeros: true }) //testar pra ver se funciona
-const username = faker.random.alpha(10)
-const password = faker.datatype.number({min: 12, max: 999999999999})
-const repeatPassword = password
+const firstName = "Lucas"
+const lastName = "Bertucini"
+const streetAddress = "888, Boulevard Avenue"
+const city = "Reno"
+const state = "Nevada"
+const zipCode = "89108"
+const phone = "(555)555-1234"
+const ssn = "238-44-2813" //testar pra ver se funciona
+const username = "bertucini"
+const password = "1234567890123"
+const repeatPassword = "1234567890123"
 
 describe('Validation Home', () => {
   

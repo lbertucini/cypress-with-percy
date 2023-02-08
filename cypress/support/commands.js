@@ -406,3 +406,29 @@ Cypress.Commands.add('componentRegister', () =>{
    
 })
 
+Cypress.Commands.add('portalLogin', ()=> {
+
+
+
+  cy.session(["bertucini", "1234567890123"], () => {
+    cy.visit('https://parabank.parasoft.com/parabank/index.htm')
+    
+    cy.get('input[name="username"]')
+    .type("bertucini")
+    
+    cy.get('input[name="password"]')
+    .click()
+    .type("1234567890123")
+    
+    cy.get('input[value="Log In"]')
+    .click()
+
+    //cy.visit('https://parabank.parasoft.com/parabank/overview.htm')
+  })
+
+})
+
+
+Cypress.Commands.add('openNewAccount', () => {
+
+})
