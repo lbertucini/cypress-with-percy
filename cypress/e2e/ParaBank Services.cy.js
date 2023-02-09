@@ -9,10 +9,7 @@ describe('Validation Home', () => {
 
   })
 
-  it('It should open a new bank account',() => {
 
-    cy.get()
-  })
 
 
 })  
