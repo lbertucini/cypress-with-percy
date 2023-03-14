@@ -32,6 +32,4 @@ describe('Validation Home', () => {
     cy.componentNews()
   })
 
-
-
 })  
