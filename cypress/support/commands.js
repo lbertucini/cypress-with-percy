@@ -24,11 +24,13 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-
+import '@percy/cypress';
 const dayjs = require('dayjs')
 
 
 Cypress.Commands.add('topMenu', (all) =>{
+
+  cy.percySnapshot()
 
   cy.get('#topPanel')
       .should('be.visible')
@@ -47,6 +49,7 @@ Cypress.Commands.add('topMenu', (all) =>{
   
   cy.get('.leftmenu')
       .should('be.visible')
+
 })
 
 Cypress.Commands.add('leftMenu', (all) =>{

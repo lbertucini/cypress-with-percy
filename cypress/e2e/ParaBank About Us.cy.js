@@ -1,4 +1,5 @@
-/// <reference types="cypress" />
+
+import '@percy/cypress'
 
 
 describe('Validation Home', () => {
