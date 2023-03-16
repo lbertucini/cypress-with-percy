@@ -16,15 +16,15 @@ const username = faker.random.alpha(10)
 const password = faker.datatype.number({min: 12, max: 999999999999})
 const repeatPassword = password
 
-describe('Validation Home', () => {
+describe('Account Services Validation Home', () => {
   
-  // beforeEach(() => {
-  //   cy.visit('https://parabank.parasoft.com/parabank/register.htm')
-  // })
+  beforeEach(() => {
+    cy.visit('https://parabank.parasoft.com/parabank/register.htm')
+  })
 
   
   it('It should validate the top menu', () => {
-    cy.visit('https://parabank.parasoft.com/parabank/register.htm')
+
     cy.topMenu()
   })
 
@@ -90,13 +90,15 @@ describe('Validation Home', () => {
     .click()
     .type(repeatPassword)  
 
+    cy.percySnapshot()
+
     cy.get('input[value="Register"]')
     .click()
 
     cy.get('h1[class="title"]')
     .contains('Welcome')
   })
-    it('It should login',() => {
+    it('It should validate account servicoes',() => {
 
       cy.visit('https://parabank.parasoft.com/parabank/index.htm')
 
@@ -110,13 +112,7 @@ describe('Validation Home', () => {
     
       cy.get('input[value="Log In"]')
         .click()
-    
-        
-      })
 
-    it('It should validate account services ',() => {
-
-   
     cy.get('#leftPanel > ul > li')
       .eq(0)
       .should('contain.text', 'Open New Account') 
@@ -178,11 +174,6 @@ describe('Validation Home', () => {
         
       })
 
-
-
- 
-
- 
 
 })  
 

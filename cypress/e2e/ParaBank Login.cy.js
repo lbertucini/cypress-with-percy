@@ -14,7 +14,7 @@ const username = faker.random.alpha(10)
 const password = faker.datatype.number({min: 12, max: 999999999999})
 const repeatPassword = password
 
-describe('Validation Home', () => {
+describe('Login Validation Home', () => {
   
   beforeEach(() => {
   })

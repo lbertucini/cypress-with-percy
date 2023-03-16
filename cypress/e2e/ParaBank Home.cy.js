@@ -7,7 +7,7 @@ const now = dayjs().format('MM/DD/YYYY')
 
 
 describe('Validation Home', () => {
-  before(() => {
+  beforeEach(() => {
     cy.visit('https://parabank.parasoft.com/parabank/index.htm')
   })
 

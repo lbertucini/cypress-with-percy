@@ -2,9 +2,9 @@
 import '@percy/cypress'
 
 
-describe('Validation Home', () => {
+describe('About Us Validation Home', () => {
   
-  before(() => {
+  beforeEach(() => {
     cy.visit('https://parabank.parasoft.com/parabank/news.htm#6')
   })
 
@@ -14,12 +14,12 @@ describe('Validation Home', () => {
   })
 
   it('It should validate left menu', () => {
-    
+    cy.percySnapshot()
     cy.leftMenu()
   })
 
   it('It should validate the shortcuts on the right side',() => {
-    
+    cy.percySnapshot()
     cy.shortcutIcons()
   })
 
